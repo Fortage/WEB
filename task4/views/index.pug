@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  main#indexmain
+    div#betterback1.betterback
+      a#index-res(href="/guest/create") Зарезервировать стол
+      a#index-list(href="/guest_all") Все резервы
+      div#form-wrapper
+        span#searchspan Поиск Резерва по ID
+        form#search_form(action="" method="GET")
+          input#resid(type="text", placeholder="Ваш ID")
+          button#searchbutton(type='submit') Искать
+        
+  script
+    include ../public/javascripts/find_by_id.js
